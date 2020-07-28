@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      User Rating 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+    
+
+    <!-- <ion-item *ngFor="let items of user">
+      
+      <ion-label slot="start">{{items.u_name}}</ion-label>
+      <hr>
+      <ion-label >{{items.Count_words}}</ion-label>
+      <hr>
+      <ion-label slot="end">{{items.Avg_rating}}</ion-label>
+      <hr>
+    </ion-item>
+    
+    -->
+
+
+
+
+
+
+
+    <ion-row>
+      <ion-col size="6" style="border-bottom: 1px solid black;">
+        Name
+      </ion-col>
+      <ion-col style="border-bottom: 1px solid black;">
+       Total Words
+      </ion-col>
+      <ion-col style="border-bottom: 1px solid black;">
+        Average Rating
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let items of user">
+      <ion-col size="6" style="border-bottom: 1px solid black;">
+        {{items.u_name}}
+      </ion-col>
+      <ion-col style="border-bottom: 1px solid black;">
+        {{items.Count_words}}
+      </ion-col>
+      <ion-col style="border-bottom: 1px solid black;">
+        {{items.Avg_rating}}
+      </ion-col>
+    </ion-row>
+</ion-content>

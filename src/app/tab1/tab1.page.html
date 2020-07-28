@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Words
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let items of words_arr">
+      <ion-label>{{items.w_name}}</ion-label>
+      <ion-icon slot="end" name="trash-outline" (click)="presentAlertConfirm(items)"></ion-icon>
+
+    </ion-item>
+    </ion-list>
+</ion-content>
